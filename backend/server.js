@@ -467,7 +467,10 @@ Make it feel custom, tailored, and write it in first person as the matchmaker. K
 
 // Serve frontend in production (optional, good practice)
 if (process.env.NODE_ENV === 'production') {
-  const distPath = path.join(__dirname, 'dist');
+  let distPath = path.join(__dirname, 'dist');
+  if (!fs.existsSync(distPath)) {
+    distPath = path.join(__dirname, '..', 'frontend', 'dist');
+  }
   if (fs.existsSync(distPath)) {
     app.use(express.static(distPath));
     
