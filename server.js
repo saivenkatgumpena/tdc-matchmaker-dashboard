@@ -470,7 +470,14 @@ if (process.env.NODE_ENV === 'production') {
   const distPath = path.join(__dirname, 'dist');
   if (fs.existsSync(distPath)) {
     app.use(express.static(distPath));
-    app.get('/:path*', (req, res) => {
+    
+    // Catch-all middleware for frontend routing
+    app.use((req, res) => {
+      // If an API request reaches here, it means it didn't match any valid API route
+      if (req.path.startsWith('/api')) {
+        return res.status(404).json({ error: 'API route not found' });
+      }
+      
       const indexPath = path.join(distPath, 'index.html');
       if (fs.existsSync(indexPath)) {
         res.sendFile(indexPath);
@@ -479,7 +486,10 @@ if (process.env.NODE_ENV === 'production') {
       }
     });
   } else {
-    app.get('/:path*', (req, res) => {
+    app.use((req, res) => {
+      if (req.path.startsWith('/api')) {
+        return res.status(404).json({ error: 'API route not found' });
+      }
       res.status(200).send('TDC Matchmaker Dashboard: Backend is running. Frontend build folder (dist) not found.');
     });
   }
