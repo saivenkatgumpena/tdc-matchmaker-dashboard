@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Mail, ArrowRight, Check, X, ShieldAlert } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Mail } from 'lucide-react';
 
 export default function MatchesView({ customers }) {
   const [sentMatches, setSentMatches] = useState([]);

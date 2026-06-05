@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Users, CheckCircle2, Send, Calendar, ArrowRight, Star, Edit3, MoreHorizontal, 
-  MapPin, CheckCircle, Sparkles, HelpCircle, Heart, ShieldAlert, Award
+  CheckCircle, Sparkles, HelpCircle, Heart
 } from 'lucide-react';
 import CompatibilityDrawer from './CompatibilityDrawer';
 import SendMatchModal from './SendMatchModal';
@@ -153,7 +153,7 @@ export default function DashboardView({
     setSendMatchOpen(true);
   };
 
-  const handleConfirmSendMatch = (introMessage) => {
+  const handleConfirmSendMatch = () => {
     // Send match details to backend
     fetch('/api/send-match', {
       method: 'POST',

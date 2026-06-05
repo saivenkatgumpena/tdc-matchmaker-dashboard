@@ -2,34 +2,19 @@
   "name": "the-date-crew",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "start": "node server.js",
-    "dev": "concurrently \"vite\" \"node server.js\"",
-    "server": "node server.js",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "npm start --workspace=backend",
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
+    "server": "npm run dev --workspace=backend",
+    "build": "npm run build --workspace=frontend",
+    "lint": "npm run lint --workspace=frontend",
+    "preview": "npm run preview --workspace=frontend"
   },
   "dependencies": {
-    "concurrently": "^10.0.3",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "lucide-react": "^1.17.0",
-    "openai": "^6.42.0",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "vite": "^8.0.12",
-    "@vitejs/plugin-react": "^6.0.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "eslint": "^10.3.0",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.6.0"
+    "concurrently": "^10.0.3"
   }
 }

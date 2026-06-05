@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Send, Sparkles } from 'lucide-react';
 
 export default function SendMatchModal({ isOpen, onClose, customer, candidate, onConfirm }) {
@@ -7,7 +7,9 @@ export default function SendMatchModal({ isOpen, onClose, customer, candidate, o
 
   useEffect(() => {
     if (isOpen && customer && candidate) {
-      setLoading(true);
+      Promise.resolve().then(() => {
+        setLoading(true);
+      });
       // Fetch AI Intro message
       fetch('/api/send-match', {
         method: 'POST',

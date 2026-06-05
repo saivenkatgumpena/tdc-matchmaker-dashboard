@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { User, Bell, Shield, Save } from 'lucide-react';
 
 export default function SettingsView() {

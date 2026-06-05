@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar as CalendarIcon, Clock, User, Plus, Search, CheckCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Clock, Search } from 'lucide-react';
 
 export default function CalendarView({ customers }) {
   const [meetings, setMeetings] = useState([]);

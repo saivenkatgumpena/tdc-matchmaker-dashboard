@@ -13,6 +13,33 @@ A premium, psychology-driven internal CRM portal designed for the matchmakers at
 
 ---
 
+## 📂 Project Structure
+
+This project is structured as an npm workspaces monorepo for clean separation of concerns and streamlined local development:
+
+```
+the-date-crew/
+├── 📁 frontend/          # React 19 + Vite dashboard client code
+│   ├── 📁 public/        # Static assets
+│   ├── 📁 src/           # Component and CSS source code
+│   ├── eslint.config.js  # Frontend linting configurations
+│   ├── index.html        # Entry HTML
+│   ├── package.json      # Frontend-specific dependencies
+│   ├── vercel.json       # Frontend routing / proxy rewrite configurations
+│   └── vite.config.js    # Vite builder and backend dev-server proxy setup
+│
+├── 📁 backend/           # Node.js + Express.js API server code
+│   ├── db.json           # Local mock JSON database
+│   ├── package.json      # Backend-specific dependencies
+│   └── server.js         # API endpoints and compatibility engine
+│
+├── README.md             # Project documentation
+├── package-lock.json     # Root-level unified lockfile
+└── package.json          # Root workspace orchestration
+```
+
+---
+
 ## 🧬 Matching Compatibility Rules
 
 The portal calculates a compatibility score out of **100%** based on weighted, psychology-focused criteria:

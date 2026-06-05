@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Search, Plus, Filter, ArrowRight, UserPlus, SlidersHorizontal } from 'lucide-react';
+import { useState } from 'react';
+import { Search, Filter, ArrowRight, UserPlus, SlidersHorizontal } from 'lucide-react';
 
 export default function CustomersView({ 
   customers, 

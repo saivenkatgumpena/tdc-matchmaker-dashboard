@@ -1,5 +1,4 @@
-import React from 'react';
-import { X, Award, AlertTriangle, Sparkles, Target, Compass, Heart, MapPin, Briefcase, Smile } from 'lucide-react';
+import { X, AlertTriangle, Sparkles, Target, Compass, Heart, MapPin, Briefcase, Smile } from 'lucide-react';
 
 export default function CompatibilityDrawer({ isOpen, onClose, customer, candidate, compatibility }) {
   if (!isOpen || !compatibility) return null;

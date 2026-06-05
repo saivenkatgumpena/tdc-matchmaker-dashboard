@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   LayoutDashboard, Users, Heart, ListTodo, Calendar, BarChart2, Settings, 
-  LogOut, Search, Bell, Sparkles, Lock, MessageSquare, Compass, HelpCircle 
+  LogOut, Search, Bell, Sparkles, Lock, Compass 
 } from 'lucide-react';
 
 // Child view imports
@@ -13,6 +13,7 @@ import CalendarView from './components/CalendarView';
 import ReportsView from './components/ReportsView';
 import SettingsView from './components/SettingsView';
 import AddCustomerModal from './components/AddCustomerModal';
+import JourneyBoardView from './components/JourneyBoardView';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('Dashboard');
@@ -29,16 +30,42 @@ export default function App() {
 
   const [isAddingCustomer, setIsAddingCustomer] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
-  const [notifications, setNotifications] = useState([
+  const [notifications] = useState([
     { id: 1, text: "Aarav Sharma requested a call log", time: "10m ago" },
     { id: 2, text: "Vihaan Malhotra scheduled a slot", time: "1h ago" },
     { id: 3, text: "System generated 4 new recommendations", time: "3h ago" }
   ]);
 
-  // Load customers and stats on mount
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // Login authentication states
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setLoginError('');
+
+    // Simulate network latency for a highly realistic, premium feel
+    setTimeout(() => {
+      if (email.trim().toLowerCase() === 'sai@thedatecrew.com' && password === 'password123') {
+        setIsLoggedIn(true);
+        setIsLoading(false);
+      } else {
+        setLoginError('Invalid email or password. Please try again.');
+        setIsLoading(false);
+      }
+    }, 1200);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setEmail('');
+    setPassword('');
+  };
 
   const fetchData = () => {
     // Fetch stats
@@ -64,6 +91,12 @@ export default function App() {
       })
       .catch(err => console.error('Error fetching customers:', err));
   };
+
+  // Load customers and stats on mount
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleAddCustomer = (newCustomerData) => {
     fetch('/api/customers', {
@@ -92,6 +125,111 @@ export default function App() {
     c.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
     c.city.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  if (!isLoggedIn) {
+    return (
+      <div className="login-page-container">
+        <div className="login-card">
+          <div className="login-logo-section">
+            <div className="login-logo-icon">❤️</div>
+            <h2 className="login-title">TDC Portal</h2>
+            <p className="login-subtitle">The Date Crew Matchmaker CRM</p>
+          </div>
+
+          <form onSubmit={handleLoginSubmit} className="login-form">
+            <div className="login-input-group">
+              <label className="login-input-label">Email Address</label>
+              <div className="login-input-wrapper">
+                <span className="login-input-icon">
+                  <Compass size={18} />
+                </span>
+                <input 
+                  type="email" 
+                  className="login-input" 
+                  placeholder="sai@thedatecrew.com" 
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setLoginError('');
+                  }}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="login-input-group">
+              <label className="login-input-label">Password</label>
+              <div className="login-input-wrapper">
+                <span className="login-input-icon">
+                  <Lock size={18} />
+                </span>
+                <input 
+                  type={showPassword ? "text" : "password"} 
+                  className="login-input" 
+                  placeholder="••••••••" 
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                    setLoginError('');
+                  }}
+                  required
+                />
+                <button 
+                  type="button" 
+                  className="login-password-toggle"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "Hide" : "Show"}
+                </button>
+              </div>
+            </div>
+
+            {loginError && (
+              <div className="login-error-msg">
+                <span>⚠️ {loginError}</span>
+              </div>
+            )}
+
+            <button type="submit" className="login-btn" disabled={isLoading}>
+              {isLoading ? (
+                <>
+                  <span className="login-btn-spinner"></span>
+                  <span>Verifying...</span>
+                </>
+              ) : (
+                <>
+                  <span>Sign In to CRM</span>
+                </>
+              )}
+            </button>
+          </form>
+
+          <div className="login-credentials-helper">
+            <div className="login-credentials-title">Demo Matchmaker Credentials</div>
+            <div className="login-credentials-row">
+              <span>Email:</span>
+              <strong>sai@thedatecrew.com</strong>
+            </div>
+            <div className="login-credentials-row">
+              <span>Password:</span>
+              <strong>password123</strong>
+            </div>
+            <button 
+              type="button" 
+              className="login-autofill-btn"
+              onClick={() => {
+                setEmail('sai@thedatecrew.com');
+                setPassword('password123');
+                setLoginError('');
+              }}
+            >
+              Auto-fill Credentials
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="app-container">
@@ -134,6 +272,14 @@ export default function App() {
           >
             <Users size={16} />
             <span>Customers</span>
+          </div>
+
+          <div 
+            className={`nav-item ${currentView === 'Journey Board' ? 'active' : ''}`}
+            onClick={() => setCurrentView('Journey Board')}
+          >
+            <Compass size={16} />
+            <span>Journey Board</span>
           </div>
 
           <div 
@@ -192,7 +338,7 @@ export default function App() {
             </button>
           </div>
 
-          <button className="logout-btn" onClick={() => alert('Logged out')}>
+          <button className="logout-btn" onClick={handleLogout}>
             <LogOut size={16} />
             <span>Logout</span>
           </button>
@@ -281,6 +427,14 @@ export default function App() {
                 setCurrentView('Dashboard');
               }}
               onAddCustomerClick={() => setIsAddingCustomer(true)}
+              onNavigateToView={setCurrentView}
+            />
+          )}
+
+          {currentView === 'Journey Board' && (
+            <JourneyBoardView 
+              customers={customers} 
+              onCustomerSelect={setSelectedCustomer}
               onNavigateToView={setCurrentView}
             />
           )}

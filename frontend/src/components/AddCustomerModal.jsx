@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { X, Save } from 'lucide-react';
 
 export default function AddCustomerModal({ isOpen, onClose, onSave }) {

@@ -1,5 +1,4 @@
-import React from 'react';
-import { TrendingUp, Users, CheckCircle, Send, Award, PieChart, BarChart } from 'lucide-react';
+import { Users, CheckCircle, Send, Award, PieChart, BarChart } from 'lucide-react';
 
 export default function ReportsView({ stats, customers }) {
   // Compute counts per journey stage

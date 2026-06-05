@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { ClipboardList, Plus, Trash2, Calendar, FileText, CheckCircle, User } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ClipboardList, Plus, Trash2, FileText, User } from 'lucide-react';
 
-export default function TasksNotesView({ customers }) {
+export default function TasksNotesView() {
   const [tasks, setTasks] = useState([
     { id: 1, text: "Verify Vihaan Malhotra's medical license ID", completed: false },
     { id: 2, text: "Schedule matching session for Rahul Verma", completed: true },
