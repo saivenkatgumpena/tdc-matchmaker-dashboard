@@ -467,10 +467,22 @@ Make it feel custom, tailored, and write it in first person as the matchmaker. K
 
 // Serve frontend in production (optional, good practice)
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'dist')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-  });
+  const distPath = path.join(__dirname, 'dist');
+  if (fs.existsSync(distPath)) {
+    app.use(express.static(distPath));
+    app.get('*', (req, res) => {
+      const indexPath = path.join(distPath, 'index.html');
+      if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+      } else {
+        res.status(200).send('TDC Matchmaker Dashboard: Frontend is building or index.html is missing. Please reload in a moment!');
+      }
+    });
+  } else {
+    app.get('*', (req, res) => {
+      res.status(200).send('TDC Matchmaker Dashboard: Backend is running. Frontend build folder (dist) not found.');
+    });
+  }
 }
 
 app.listen(PORT, () => {
