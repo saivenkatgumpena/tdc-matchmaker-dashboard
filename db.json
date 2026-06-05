@@ -1,0 +1,478 @@
+{
+  "matchmaker": {
+    "name": "Sai Venkat",
+    "role": "Matchmaker",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150"
+  },
+  "customers": [
+    {
+      "id": "TDC1254",
+      "name": "Aarav Sharma",
+      "age": 29,
+      "gender": "Male",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "maritalStatus": "Never Married",
+      "journeyStatus": "Profile Verification",
+      "lastActivity": "2h ago",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200",
+      "height": "5'11\"",
+      "education": "MBA from IIM Bangalore",
+      "occupation": "Product Manager at Google",
+      "income": "32 LPA",
+      "bio": "A tech product manager who loves weekend photography, hiking, and exploring coastal cafes. Deeply family-oriented yet modern in outlook, seeking a partner who values mutual growth and open communication.",
+      "lifeGoals": {
+        "wantKids": "Yes",
+        "marriageTimeline": "1-2 Years",
+        "familyValues": "Moderate",
+        "expectations": "Supportive and growth-minded partnership"
+      },
+      "lifestyle": {
+        "smoking": "No",
+        "drinking": "Socially",
+        "fitness": "Regular",
+        "travel": "Frequent",
+        "pets": "Dog lover",
+        "socialLife": "Balanced"
+      },
+      "locationPreferences": {
+        "relocation": "Open to Relocate",
+        "workMode": "Hybrid"
+      },
+      "personality": {
+        "social": "Ambivert",
+        "valuesStyle": "Moderate",
+        "orientation": "Balanced"
+      },
+      "careerEducation": {
+        "educationLevel": "Postgraduate",
+        "professionalAmbition": "High",
+        "industry": "Tech",
+        "mindset": "Growth"
+      },
+      "interests": [
+        "Photography",
+        "Travel",
+        "Reading",
+        "Hiking",
+        "Music"
+      ]
+    },
+    {
+      "id": "TDC1255",
+      "name": "Ananya Reddy",
+      "age": 27,
+      "gender": "Female",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "maritalStatus": "Never Married",
+      "journeyStatus": "Actively Matching",
+      "lastActivity": "1d ago",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200",
+      "height": "5'4\"",
+      "education": "B.Tech from NIT Trichy",
+      "occupation": "Consultant at Deloitte",
+      "income": "18 LPA",
+      "bio": "Consultant by day, amateur chef by night. I enjoy standard filtration coffee, acoustic music, and traveling to historical sites. Looking for a genuine connection built on shared interests and laughing at simple things.",
+      "lifeGoals": {
+        "wantKids": "Yes",
+        "marriageTimeline": "2-3 Years",
+        "familyValues": "Moderate",
+        "expectations": "An equal companion who shares household chores and career goals"
+      },
+      "lifestyle": {
+        "smoking": "No",
+        "drinking": "Socially",
+        "fitness": "Regular",
+        "travel": "Frequent",
+        "pets": "None",
+        "socialLife": "Balanced"
+      },
+      "locationPreferences": {
+        "relocation": "Open to Relocate",
+        "workMode": "Hybrid"
+      },
+      "personality": {
+        "social": "Ambivert",
+        "valuesStyle": "Moderate",
+        "orientation": "Balanced"
+      },
+      "careerEducation": {
+        "educationLevel": "Graduate",
+        "professionalAmbition": "High",
+        "industry": "Consulting",
+        "mindset": "Growth"
+      },
+      "interests": [
+        "Cooking",
+        "Travel",
+        "Music",
+        "Reading"
+      ]
+    },
+    {
+      "id": "TDC1256",
+      "name": "Rahul Verma",
+      "age": 31,
+      "gender": "Male",
+      "city": "Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "maritalStatus": "Never Married",
+      "journeyStatus": "Shortlisted",
+      "lastActivity": "3h ago",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
+      "height": "6'0\"",
+      "education": "M.S. from Columbia University",
+      "occupation": "Software Architect",
+      "income": "45 LPA",
+      "bio": "Technologist with a passion for indie films, history podcasts, and specialty coffee. Family is extremely important to me, and I values sincerity, intelligence, and an active lifestyle.",
+      "lifeGoals": {
+        "wantKids": "Yes",
+        "marriageTimeline": "1 Year",
+        "familyValues": "Traditional",
+        "expectations": "A warm, family-oriented partner who enjoys life's simple joys"
+      },
+      "lifestyle": {
+        "smoking": "No",
+        "drinking": "No",
+        "fitness": "Regular",
+        "travel": "Moderate",
+        "pets": "Cat lover",
+        "socialLife": "Balanced"
+      },
+      "locationPreferences": {
+        "relocation": "Not Open to Relocate",
+        "workMode": "Remote"
+      },
+      "personality": {
+        "social": "Introvert",
+        "valuesStyle": "Traditional",
+        "orientation": "Family-Oriented"
+      },
+      "careerEducation": {
+        "educationLevel": "Postgraduate",
+        "professionalAmbition": "High",
+        "industry": "Tech",
+        "mindset": "Growth"
+      },
+      "interests": [
+        "Movies",
+        "Reading",
+        "Music",
+        "Cooking"
+      ]
+    },
+    {
+      "id": "TDC1257",
+      "name": "Meera Nair",
+      "age": 28,
+      "gender": "Female",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "country": "India",
+      "maritalStatus": "Divorced",
+      "journeyStatus": "Actively Matching",
+      "lastActivity": "5h ago",
+      "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200",
+      "height": "5'5\"",
+      "education": "B.Arch from Sir JJ College of Architecture",
+      "occupation": "Lead Architect",
+      "income": "20 LPA",
+      "bio": "Creative mind who loves design, sketching, and old Hindi music. Believes that life's challenges only make us wiser. Looking for an empathetic partner with a progressive mindset and a dry sense of humor.",
+      "lifeGoals": {
+        "wantKids": "Maybe",
+        "marriageTimeline": "2 Years",
+        "familyValues": "Modern",
+        "expectations": "An understanding partner who respects individuality and space"
+      },
+      "lifestyle": {
+        "smoking": "No",
+        "drinking": "Socially",
+        "fitness": "Moderate",
+        "travel": "Moderate",
+        "pets": "Dog lover",
+        "socialLife": "Balanced"
+      },
+      "locationPreferences": {
+        "relocation": "Open to Relocate",
+        "workMode": "Hybrid"
+      },
+      "personality": {
+        "social": "Ambivert",
+        "valuesStyle": "Modern",
+        "orientation": "Balanced"
+      },
+      "careerEducation": {
+        "educationLevel": "Graduate",
+        "professionalAmbition": "Moderate",
+        "industry": "Design",
+        "mindset": "Balanced"
+      },
+      "interests": [
+        "Photography",
+        "Music",
+        "Travel",
+        "Cooking"
+      ]
+    },
+    {
+      "id": "TDC1258",
+      "name": "Vihaan Malhotra",
+      "age": 34,
+      "gender": "Male",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India",
+      "maritalStatus": "Never Married",
+      "journeyStatus": "Profile Verification",
+      "lastActivity": "1d ago",
+      "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200",
+      "height": "5'10\"",
+      "education": "MD from AIIMS Delhi",
+      "occupation": "Cardiologist",
+      "income": "50 LPA",
+      "bio": "Dedicated medical professional who tries to balance shifts with tennis, swimming, and reading history. Looking for someone who is understanding of demanding schedules and appreciates intellectual discussions.",
+      "lifeGoals": {
+        "wantKids": "Yes",
+        "marriageTimeline": "1 Year",
+        "familyValues": "Traditional",
+        "expectations": "Mutual support in demanding professional settings"
+      },
+      "lifestyle": {
+        "smoking": "No",
+        "drinking": "Socially",
+        "fitness": "Regular",
+        "travel": "Moderate",
+        "pets": "None",
+        "socialLife": "Balanced"
+      },
+      "locationPreferences": {
+        "relocation": "Not Open to Relocate",
+        "workMode": "On-site"
+      },
+      "personality": {
+        "social": "Introvert",
+        "valuesStyle": "Traditional",
+        "orientation": "Career-Oriented"
+      },
+      "careerEducation": {
+        "educationLevel": "Doctorate",
+        "professionalAmbition": "High",
+        "industry": "Healthcare",
+        "mindset": "Growth"
+      },
+      "interests": [
+        "Sports",
+        "Reading",
+        "Travel",
+        "Music"
+      ]
+    },
+    {
+      "id": "TDC1259",
+      "name": "Neha Kapoor",
+      "age": 30,
+      "gender": "Female",
+      "city": "Gurugram",
+      "state": "Haryana",
+      "country": "India",
+      "maritalStatus": "Never Married",
+      "journeyStatus": "Meeting Scheduled",
+      "lastActivity": "6h ago",
+      "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200",
+      "height": "5'6\"",
+      "education": "B.Com + CA",
+      "occupation": "Investment Banker at Goldman Sachs",
+      "income": "38 LPA",
+      "bio": "Finance professional who enjoys high-intensity workouts, theater, and fine wine. Enthusiastic about continuous learning and personal development. Seeking an ambitious and self-driven partner.",
+      "lifeGoals": {
+        "wantKids": "Yes",
+        "marriageTimeline": "1-2 Years",
+        "familyValues": "Modern",
+        "expectations": "An ambitious partner who values equality and shares an active lifestyle"
+      },
+      "lifestyle": {
+        "smoking": "No",
+        "drinking": "Socially",
+        "fitness": "Regular",
+        "travel": "Frequent",
+        "pets": "None",
+        "socialLife": "Active"
+      },
+      "locationPreferences": {
+        "relocation": "Open to Relocate",
+        "workMode": "Hybrid"
+      },
+      "personality": {
+        "social": "Extrovert",
+        "valuesStyle": "Modern",
+        "orientation": "Career-Oriented"
+      },
+      "careerEducation": {
+        "educationLevel": "Graduate",
+        "professionalAmbition": "High",
+        "industry": "Finance",
+        "mindset": "Growth"
+      },
+      "interests": [
+        "Sports",
+        "Travel",
+        "Movies",
+        "Cooking"
+      ]
+    },
+    {
+      "id": "TDC1260",
+      "name": "Meera Khanna",
+      "age": 28,
+      "gender": "Female",
+      "city": "Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "maritalStatus": "Never Married",
+      "journeyStatus": "Profile Verification",
+      "lastActivity": "4h ago",
+      "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200",
+      "height": "5'5\"",
+      "education": "MBA from IIM Calcutta",
+      "occupation": "Product Manager at Amazon",
+      "income": "22 LPA",
+      "bio": "Tech product manager with a soft corner for classical dance, poetry writing, and weekend runs. Deeply curious, loves discussions about tech, literature, and culture. Seeking a partner who is intellectual and kind.",
+      "lifeGoals": {
+        "wantKids": "Yes",
+        "marriageTimeline": "2 Years",
+        "familyValues": "Moderate",
+        "expectations": "Balanced partnership with intellectual conversations"
+      },
+      "lifestyle": {
+        "smoking": "No",
+        "drinking": "Socially",
+        "fitness": "Regular",
+        "travel": "Frequent",
+        "pets": "Dog lover",
+        "socialLife": "Balanced"
+      },
+      "locationPreferences": {
+        "relocation": "Open to Relocate",
+        "workMode": "Hybrid"
+      },
+      "personality": {
+        "social": "Ambivert",
+        "valuesStyle": "Moderate",
+        "orientation": "Balanced"
+      },
+      "careerEducation": {
+        "educationLevel": "Postgraduate",
+        "professionalAmbition": "High",
+        "industry": "Tech",
+        "mindset": "Growth"
+      },
+      "interests": [
+        "Reading",
+        "Writing",
+        "Travel",
+        "Music",
+        "Sports"
+      ]
+    },
+    {
+      "id": "TDC1261",
+      "name": "Neha Joshi",
+      "age": 26,
+      "gender": "Female",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "country": "India",
+      "maritalStatus": "Never Married",
+      "journeyStatus": "Profile Verification",
+      "lastActivity": "8h ago",
+      "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200",
+      "height": "5'3\"",
+      "education": "B.Des from NIFT Mumbai",
+      "occupation": "Brand Manager at Nykaa",
+      "income": "16 LPA",
+      "bio": "Brand manager with a love for fashion design, pottery, and indie concerts. Very social, loves hosting dinners. Seeking a warm and fun partner who is settled in their career and shares a creative outlook.",
+      "lifeGoals": {
+        "wantKids": "Yes",
+        "marriageTimeline": "2-3 Years",
+        "familyValues": "Moderate",
+        "expectations": "A companion who supports my career and loves travel"
+      },
+      "lifestyle": {
+        "smoking": "No",
+        "drinking": "Socially",
+        "fitness": "Moderate",
+        "travel": "Frequent",
+        "pets": "None",
+        "socialLife": "Active"
+      },
+      "locationPreferences": {
+        "relocation": "Not Open to Relocate",
+        "workMode": "Hybrid"
+      },
+      "personality": {
+        "social": "Extrovert",
+        "valuesStyle": "Moderate",
+        "orientation": "Balanced"
+      },
+      "careerEducation": {
+        "educationLevel": "Graduate",
+        "professionalAmbition": "High",
+        "industry": "Fashion/E-Commerce",
+        "mindset": "Growth"
+      },
+      "interests": [
+        "Cooking",
+        "Music",
+        "Travel",
+        "Photography",
+        "Fashion"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "id": "n1",
+      "customerId": "TDC1254",
+      "date": "2026-06-04T10:00:00.000Z",
+      "content": "Aarav called. He mentioned he is very interested in Ananya Iyer. He likes that they both share a background in consulting/tech and are open to relocate. He wants to know if she has children preferences aligned with him."
+    },
+    {
+      "id": "n2",
+      "customerId": "TDC1254",
+      "date": "2026-06-03T15:30:00.000Z",
+      "content": "Initial profiling call completed. Aarav is extremely pleasant, mature, and clear about his life goals. He intends to marry within 1-2 years. Main focus is on intellectual connection and location flexibility."
+    }
+  ],
+  "meetings": [
+    {
+      "id": "m1",
+      "customerId": "TDC1254",
+      "title": "Journey Strategy Call",
+      "date": "2026-06-06T11:00:00Z",
+      "status": "Scheduled",
+      "notes": "Discuss potential profiles including Ananya Iyer."
+    },
+    {
+      "id": "m2",
+      "customerId": "TDC1259",
+      "title": "Feedback on Meeting 1",
+      "date": "2026-06-05T15:00:00Z",
+      "status": "Completed",
+      "notes": "Neha was happy with the conversation, wants to exchange contact info."
+    }
+  ],
+  "sentMatches": [
+    {
+      "id": "s1",
+      "senderId": "TDC1254",
+      "receiverId": "TDC1255",
+      "date": "2026-06-04T18:22:00Z",
+      "status": "Accepted",
+      "introMessage": "Hi Ananya, Aarav shares your interest in consulting and photography. He's also open to relocating, and wants to build a growth-oriented family."
+    }
+  ]
+}
