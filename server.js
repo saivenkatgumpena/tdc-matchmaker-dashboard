@@ -470,7 +470,7 @@ if (process.env.NODE_ENV === 'production') {
   const distPath = path.join(__dirname, 'dist');
   if (fs.existsSync(distPath)) {
     app.use(express.static(distPath));
-    app.get('/*', (req, res) => {
+    app.get('/:path*', (req, res) => {
       const indexPath = path.join(distPath, 'index.html');
       if (fs.existsSync(indexPath)) {
         res.sendFile(indexPath);
@@ -479,7 +479,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     });
   } else {
-    app.get('/*', (req, res) => {
+    app.get('/:path*', (req, res) => {
       res.status(200).send('TDC Matchmaker Dashboard: Backend is running. Frontend build folder (dist) not found.');
     });
   }
